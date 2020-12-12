@@ -1,3 +1,5 @@
+
+
 export class RandomPassword {
     constructor() {
         this.characters = "";
@@ -34,6 +36,9 @@ export class RandomPassword {
         return this;
     }
 
+    getRandomInt(min, max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+     }
 
     generatePassword(){
 
@@ -43,14 +48,12 @@ export class RandomPassword {
         }
         let password = "";
         for (let i = 0; i < this.length; ++i) {
-            password += characterList[getRandomInt(0, characterList.length - 1)];
+            password += characterList[this.getRandomInt(0, characterList.length - 1)];
         }
         return password;
     }
 
-    getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    
     
 
 

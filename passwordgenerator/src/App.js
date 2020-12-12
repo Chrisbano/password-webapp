@@ -1,26 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
 import { RandomPassword } from "./utilitys/PasswordGenerator";
 
+let pwd = new RandomPassword();
+
+
+
+
+
+function generatePwd() {
+  const { upperCase, lowerCase, numeric, symbol, length } = this.state;
+  let pwd = new RandomPassword()
+    .setLength(length)
+    .setLowerCase(lowerCase)
+    .setUpperCase(upperCase)
+    .setNumberCase(numeric)
+    .setSymbol(symbol)
+    .generate();
+  this.setState({ pwd });
+}
+
 function App() {
-  return (
-    <div className="App">
-      <header className="Password Generator">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return null;
+  window.print(pwd);
+  
+  
 }
 
 export default App;
