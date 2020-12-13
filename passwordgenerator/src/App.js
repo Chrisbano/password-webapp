@@ -7,7 +7,9 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      password: { length: 15, data: "" }
+      password: { 
+        length: 15, 
+        data: "" }
     }
   }
 
@@ -28,7 +30,7 @@ class App extends React.Component {
     for(let ma = 0; ma < c; ma++) {
       a += b[Math.floor(Math.random() * b.length)];
     }
-    this.setState(s tate => ({
+    this.setState(state => ({
       password: { ...state.password, data: a }
     }));
   }
