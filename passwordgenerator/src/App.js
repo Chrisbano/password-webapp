@@ -42,16 +42,29 @@ class App extends React.Component {
     }));
   }
 
+  // Slider = () =>{
+  //   <label>
+  //           <input
+  //           type="range"
+  //           min="6"
+  //           max="32"
+  //           defaultValue={ this.state.password.length }
+  //           onChange={ e => this.setLength(e.target) }
+  //         />
+  //         { this.state.password.length }
+  //       </label>
+  // }
+
   render() {
     return (
       <div className="generator">
         <h1 className="generator-pass">{ this.state.password.data }</h1>
         <div className="generator-strong">
-          <label>
+        <label>
             <input
             type="range"
-            min="1"
-            max="64"
+            min="6"
+            max="32"
             defaultValue={ this.state.password.length }
             onChange={ e => this.setLength(e.target) }
           />
