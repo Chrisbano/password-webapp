@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './App.css'
 
 class App extends React.Component {
 
@@ -9,7 +10,13 @@ class App extends React.Component {
     this.state = {
       password: { 
         length: 15, 
-        data: "" }
+        data: "",
+        hasNums: true,
+        hasChars: true,
+        hasUpper: true,
+        hasLower: true
+       }
+
     }
   }
 
