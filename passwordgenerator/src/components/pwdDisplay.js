@@ -16,7 +16,8 @@ const Display = () => {
     const generateNewPassword = () => {
         let a = "";
         let b = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_-+=<,>.?/ABCDEFGHIJKLMOPQRSTUVWXYZ";
-        let c = 8;
+        let c = 8; //to be implemented here if we dont get the 
+                  //slider
 
         for(let ma = 0; ma < c; ma++) {
             a += b[Math.floor(Math.random() * b.length)];
