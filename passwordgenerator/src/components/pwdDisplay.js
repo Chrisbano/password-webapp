@@ -8,6 +8,11 @@ const Display = () => {
 
     const [password, setPassword] = useState('');
 
+    // const randNum = (props) => {
+    //     const {min,max} = props 
+    //     return Math.random() * (max - min) + min;
+    //   }
+
     const generateNewPassword = () => {
         let a = "";
         let b = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_-+=<,>.?/ABCDEFGHIJKLMOPQRSTUVWXYZ";
