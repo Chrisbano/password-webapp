@@ -1,24 +1,25 @@
-import {React ,useState} from 'react';
-import './CheckBox.css';
-// import Switch from '@material-ui/core/Switch';
+// import React , {useState} from 'react';
+// import './CheckBox.css';
 
-const CheckBox = () => {
+// const CheckBox = () => {
 //     const [isCheck, setIsCheck] = useState(false);
     
 //     const handleClick = () => {
-//         setIsOpen(!isCheck);
+//         setIsCheck(!isCheck);
 //     }
 
-return(
-<div>
-    {/* <Switch
-        checked={state.isCheck}
-        onChange={handleClick}
-        name="checkedA"
-        inputProps={{ 'aria-label': 'secondary checkbox' }}
-    /> */}
-</div>  
-    );
-}
+// return (
+//     <div className="CheckBox">
+//         <div className="container">
+//         <div>
+//             <input type="checkbox" id="isCheck" onChange={handleClick} />
+//             <label htmlFor="passwordStrength">Weak Password</label>
+//         </div>
 
-export default CheckBox;
+       
+//         </div>
+//     </div>
+//     );
+// };
+
+// export default CheckBox;
