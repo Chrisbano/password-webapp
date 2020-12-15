@@ -1,22 +1,25 @@
-import {React ,useState} from 'react';
-import './CheckBox.css';
-// import Switch from '@material-ui/core/Switch';
+// import React , {useState} from 'react';
+// import './CheckBox.css';
 
-const CheckBox = () => {
-    const [isCheck, setIsCheck] = useState(false);
+// const CheckBox = () => {
+//     const [isCheck, setIsCheck] = useState(false);
     
-    const handleClick = () => {
-        setIsOpen(!isCheck);
-    }
+//     const handleClick = () => {
+//         setIsCheck(!isCheck);
+//     }
 
-    return(
-        <div>
-            <label class="container">One
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-            </label>
-        </div>  
-    );
-}
+// return (
+//     <div className="CheckBox">
+//         <div className="container">
+//         <div>
+//             <input type="checkbox" id="isCheck" onChange={handleClick} />
+//             <label htmlFor="passwordStrength">Weak Password</label>
+//         </div>
 
-export default CheckBox;
+       
+//         </div>
+//     </div>
+//     );
+// };
+
+// export default CheckBox;
