@@ -1,6 +1,6 @@
 import {React ,useState} from 'react';
 import './CheckBox.css';
-import Switch from '@material-ui/core/Switch';
+// import Switch from '@material-ui/core/Switch';
 
 const CheckBox = () => {
     const [isCheck, setIsCheck] = useState(false);
@@ -9,15 +9,13 @@ const CheckBox = () => {
         setIsOpen(!isCheck);
     }
 
-return(
-<div>
-    <Switch
-        checked={state.isCheck}
-        onChange={handleClick}
-        name="checkedA"
-        inputProps={{ 'aria-label': 'secondary checkbox' }}
-    />
-</div>  
+    return(
+        <div>
+            <label class="container">One
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+        </div>  
     );
 }
 
