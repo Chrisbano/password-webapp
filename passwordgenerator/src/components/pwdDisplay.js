@@ -7,12 +7,12 @@ const Display = () => {
 
 
     const [password, setPassword] = useState('');
+    const passwordRef = useRef(null);
 
-    // const randNum = (props) => {
-    //     const {min,max} = props 
-    //     return Math.random() * (max - min) + min;
-    //   }
-
+    const copyToClipBoard = elementRef => {
+        elementRef.select();
+        document.execCommand('copy');
+    }
     const generateNewPassword = () => {
         let a = "";
         let b = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_-+=<,>.?/ABCDEFGHIJKLMOPQRSTUVWXYZ";
@@ -25,6 +25,16 @@ const Display = () => {
 
         setPassword(a);
     }
+
+    
+    
+
+    const copyClipBoard = () => {
+        copyToClipBoard(passwordRef.current)
+    }
+
+    
+    
     
     return (
         <>
@@ -32,7 +42,7 @@ const Display = () => {
                 <div className="pwdDisplayBox">
                 
                     <div className="password-display">
-                        <input type="text" value={password} className="password-display-input" readOnly >
+                        <input ref={passwordRef} type="text" value={password} className="password-display-input" readOnly >
 
                         </input>
                     </div>
@@ -43,6 +53,13 @@ const Display = () => {
                             className="generate-btn"
                             handleClick={generateNewPassword}
                         />
+                        <Button
+                            label = "Copy"
+                            className="generate-btn"
+                            handleClick={copyClipBoard}
+                        />
+
+
                     </div>
                 </div>
             </div>
