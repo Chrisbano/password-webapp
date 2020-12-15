@@ -9,17 +9,18 @@ const Display = () => {
     const [password, setPassword] = useState('');
     const passwordRef = useRef(null);
 
-    const copyToClipBoard = elementRef => {
-        elementRef.select();
+    const copyToClipBoard = Ref => {
+        Ref.select();
         document.execCommand('copy');
     }
+
     const generateNewPassword = () => {
         let a = "";
         let b = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_-+=<,>.?/ABCDEFGHIJKLMOPQRSTUVWXYZ";
         let c = 8; //to be implemented here if we dont get the 
                   //slider
 
-        for(let ma = 0; ma < c; ma++) {
+        for(let i = 0; i < c; i++) {
             a += b[Math.floor(Math.random() * b.length)];
         }
 

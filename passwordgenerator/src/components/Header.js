@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 const Header = () => {
     return (
-        <div className="row">
+    
             <div className="header">
                 <h1 className="h1">Generate a password</h1>
                 <div className="header_text">
@@ -11,7 +11,7 @@ const Header = () => {
                     </h4>
                 </div>
             </div>
-        </div>
+    
     )
 }
 export default Header;
